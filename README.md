@@ -15,6 +15,13 @@ es muss ein Interface für die Counter geschaffen werden.
     - Neue Kunden anlegen oder alte Kunden finden
     - Kurse für die Kunden anlegen
 
+
+1. Find / Create Customer
+2. Select Time and Class Type
+3a. Get Variety of alvailable teachers to select from
+3b. Get Shown which course was created for the selection
+
+
 es muss das Skillevel der Kunden automatisch erhöht werden, wenn sie einen Kurs absolvieren.
     - Beginner Kurs belegt in der Vergangenheit -> Skill auf dem Sportgerät wird auf Level_1 gesetzt
 
