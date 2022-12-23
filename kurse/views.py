@@ -5,10 +5,11 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
 from . import serializers, models, forms
 from django.views.generic.edit import FormView
-
+from django.shortcuts import render, redirect
+from django.urls import reverse
 
 class ClassCreateView(FormView):
-    template_name = 'credentials/credential/create.html'
+    template_name = 'kurse/kurs/class-create.html'
     form_class = forms.ClassCreateForm
 
     def get_form(self, form_class=None):
@@ -16,7 +17,6 @@ class ClassCreateView(FormView):
         if form_class is None:
             form_class = self.get_form_class()
         kwargs = self.get_form_kwargs()
-        kwargs['aktion'] = 'erstellen'
         return form_class(**kwargs)
 
     def get(self, request, *args, **kwargs):
@@ -31,8 +31,6 @@ class ClassCreateView(FormView):
     def post(self, request, *args, **kwargs):
 
         form = self.get_form()
-        _, data = signer.loads_from_request(self.request)
-
         error = False
 
         if not form.is_valid():
