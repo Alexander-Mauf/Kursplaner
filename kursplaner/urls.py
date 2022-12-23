@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^docs/', include_docs_urls(title='Pointpro-Secrets-API', permission_classes=(IsAuthenticated,))),
     path('kurse/', include('kurse.urls')),
-
+    path('', admin.site.urls),
 ]
 
 if settings.DEBUG:
