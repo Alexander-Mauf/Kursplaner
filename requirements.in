@@ -7,3 +7,7 @@ django-crispy-forms
 django-debug-toolbar
 mysqlclient
 coreapi
+django-filter
+djangorestframework
+django-crispy-forms
+django-debug-toolbar

@@ -155,7 +155,7 @@ DATABASES = {
 }
 
 GID = {
-    "APP_NAME": "pointpro-services-extranet",
+    "APP_NAME": "skischule-fichtelberg-kursplaner",
 }
 
 # Password validation
@@ -249,8 +249,8 @@ if DEBUG:
 if (os.environ.get('ENV', 'develop')) == 'production':
     DEBUG = False
     TEST_MODE = os.environ.get("TEST_MODE", False)
-    ALLOWED_HOSTS += ('pointpro-services-extranet.ey.r.appspot.com',)
-    BASE_URL = os.environ.get('BASE_URL', "https://pointpro-services-extranet.ey.r.appspot.com")
+    ALLOWED_HOSTS += ('+.ey.r.appspot.com',)
+    BASE_URL = os.environ.get('BASE_URL', "")
 
     DATABASES = {
         'default': {

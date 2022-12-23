@@ -7,7 +7,7 @@ Es werden Anhand der gepflegten Verfügbarkeiten automatisch neue Kurse erstellt
 ### Todo
 
 
-post_save der Classes -> wenn ein Kurs mit lehere Created wurde, dann muss der timeslot für den Leherer geblockt werden.
+post_save der Classes -> wenn ein Kurs mit lehrer Created wurde, dann muss der timeslot für den Leherer geblockt werden.
 
 es muss eine Verfügbarkeits-eingabe-view erstellt werden
 
@@ -33,3 +33,27 @@ beim buchen der Kurse wird bereits gezeigt wie die verfügbarkeit ist.
 
 Auswertung der gegebenen Stunden für Skilehrer
 
+### Development
+
+Install dependencies
+`pip3 install --upgrade pip pip-tools && pip-compile --upgrade && pip3 install -r requirements.txt`
+
+Setup DB
+if you have a local mysql container running create a schema named `kursplaner`
+
+else change the DB-Setup in `kursplaner/settings.py`
+```py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase', # This is where you put the name of the db file. 
+                 # If one doesn't exist, it will be created at migration time.
+    }
+}
+```
+
+`python3 manage.py migrate`
+
+
+Run Development Server
+`python3 manage.py runserver`
