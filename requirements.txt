@@ -20,10 +20,16 @@ django==4.1.4
     # via
     #   -r requirements.in
     #   django-debug-toolbar
+    #   django-filter
+    #   django-tables2
     #   djangorestframework
 django-crispy-forms==1.14.0
     # via -r requirements.in
 django-debug-toolbar==3.8.1
+    # via -r requirements.in
+django-filter==22.1
+    # via -r requirements.in
+django-tables2==2.4.1
     # via -r requirements.in
 djangorestframework==3.14.0
     # via -r requirements.in

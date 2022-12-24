@@ -11,3 +11,4 @@ django-filter
 djangorestframework
 django-crispy-forms
 django-debug-toolbar
+django-tables2
