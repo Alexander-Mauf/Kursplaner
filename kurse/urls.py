@@ -14,7 +14,7 @@ router.register(r'api/timeslots', views.TimeslotViewSet)
 
 urlpatterns = [
     #path("", views.CredentialListView.as_view(), name="credential_list"),
-    path("create/", views.ClassCreateView.as_view(), name="credential_create"),
+    path("create/", views.ClassCreateStep01View.as_view(), name="credential_create"),
     #path("<hash_id>/change/", views.CredentialUpdateView.as_view(), name="credential_update"),
 ]
 

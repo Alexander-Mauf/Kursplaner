@@ -3,14 +3,14 @@ from rest_framework import viewsets
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
-from . import serializers, models, forms
+from . import serializers, models, forms, tables
 from django.views.generic.edit import FormView
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
-class ClassCreateView(FormView):
+class ClassCreateStep01View(FormView):
     template_name = 'kurse/kurs/class-create.html'
-    form_class = forms.ClassCreateForm
+    form_class = forms.CustomerCreateForm
 
     def get_form(self, form_class=None):
         """Return an instance of the form to be used in this view."""
@@ -21,11 +21,10 @@ class ClassCreateView(FormView):
 
     def get(self, request, *args, **kwargs):
         form = self.get_form()
-        sign = request.GET.get('sign')
+        table = tables.CustomerTable(models.Customer.objects.all())
         return render(request, self.template_name, {
             'form': form,
-            'sign': sign,
-            'create': True,
+            'table': table
         })
 
     def post(self, request, *args, **kwargs):
@@ -35,6 +34,11 @@ class ClassCreateView(FormView):
 
         if not form.is_valid():
             error = 'ungültige Eingaben'
+
+
+
+
+
 
 class CustomerViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CustomerSerializer

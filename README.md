@@ -17,7 +17,15 @@ es muss ein Interface für die Counter geschaffen werden.
 
 
 1. Find / Create Customer
+ - view mit table der Customer (zum suchen bereits vorhandener Kunden)
+ - in der Tabelle gibt es den Button Kurs buchen 
+ - sonst gibt es oben ein Form zum anlegen eines Neuen Kunden
+ - `wie soll es bei der Buchung für meherere Kunden laufen?`
+
 2. Select Time and Class Type
+ - Kurstyp oben 
+ - Tag auswählen und die Kurse des Tages anzeigen??? || selbst zuweisen lassen?
+
 3a. Get Variety of alvailable teachers to select from
 3b. Get Shown which course was created for the selection
 

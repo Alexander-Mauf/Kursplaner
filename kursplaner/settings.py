@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'crispy_forms',
+    'django_tables2',
     # own
     'kurse',
 ]
